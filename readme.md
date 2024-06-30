@@ -144,6 +144,6 @@ Bot also Supported with Channels. Just add bot Channel as Admin. If any new file
 
 ### Credits : 
 
-- [Adarsh Goel](https://github.com/adarsh-goel)
+- [𝖯𝖨𝖱𝖮](https://telegram.dog/piroxbots)
 - [Me For Fix Errors](https://github.com/itz-jeol)
 - Everyone In This Journey !
