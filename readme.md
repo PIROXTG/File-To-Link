@@ -6,45 +6,6 @@
    </strong></a>
 
 
-
-<hr>
-
-## Please Follow me so you know whenever I release a new Project!❤️‍🔥
-
-## 🍁 About This Bot :
-
-![streamingfilestreambot-professional-live_1](https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png)
-
-</p>
-<p align='center'>
-    This bot will give you stream links for Telegram files without the need of waiting till the download completes
-</p>
-
-
-## ♢ How to make your own :
-
-
-#### ♢ Click on This Drop-down and get more details
-<br>
-<details>
-  <summary><b>Deploy on Heroku:</b></summary>
-
-
-<a href="https://youtu.be/lBJZdaA04Ig"><img src="https://img.shields.io/badge/Watch%20Tutorial%20On%20YouTube-red.svg?logo=Youtube"></a>                     
-
-<h4> So Follow Above Video 👆 and then deploy other wise bot won't work</h4>
-
-Press the below button to Fast deploy on Heroku/Raiwlay
-Either you could locally host or deploy on [Heroku](https://heroku.com)
-### 💜 Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/)
-
-<br>
-
-
-then goto the <a href="#mandatory-vars">variables tab</a> for more info on setting up environmental variables. </details>
-
 <details>
   <summary><b>Features:</b></summary>
   
@@ -142,8 +103,3 @@ To get an instant stream link, just forward any media to the bot and boom, its f
 ### Channel Support
 Bot also Supported with Channels. Just add bot Channel as Admin. If any new file comes in Channel it will edit it with **Get Download Link** Button. </details>
 
-### Credits : 
-
-- [𝖯𝖨𝖱𝖮](https://telegram.dog/piroxbots)
-- [Me For Fix Errors](https://github.com/itz-jeol)
-- Everyone In This Journey !
