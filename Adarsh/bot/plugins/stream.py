@@ -35,7 +35,7 @@ async def private_receive_handler(c: Client, m: Message):
         stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
 
-        msg_text ="""<i><u>𝘠𝘰𝘶𝘳 𝘓𝘪𝘯𝘬 𝘐𝘴 𝘎𝘦𝘯𝘦𝘳𝘢𝘵𝘦𝘥.⚡</u></i>\n\n<b>📂 𝘍𝘪𝘭𝘦 𝘕𝘢𝘮𝘦:</b> <i>{}</i>\n\n<b>📦 𝘍𝘪𝘭𝘦 𝘚𝘪𝘻𝘦:</b> <i>{}</i>\n\n<b>📥 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘓𝘪𝘯𝘬:</b> <i>{}</i>\n\n<b>𝘓𝘪𝘯𝘬 𝘐𝘴 𝘝𝘢𝘭𝘪𝘥 𝘍𝘰𝘳 1 𝘋𝘢𝘺 𝘖𝘯𝘭𝘺.</b>"""
+        msg_text ="""<i><u>𝘠𝘰𝘶𝘳 𝘓𝘪𝘯𝘬 𝘐𝘴 𝘎𝘦𝘯𝘦𝘳𝘢𝘵𝘦𝘥.⚡</u></i>\n\n<b>📂 𝘍𝘪𝘭𝘦 𝘕𝘢𝘮𝘦:</b> <i>{}</i>\n\n<b>📦 𝘍𝘪𝘭𝘦 𝘚𝘪𝘻𝘦:</b> <i>{}</i>\n\n<b>📥 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘓𝘪𝘯𝘬:</b> <i>{}</i>\n\n<blockquote><b>𝘓𝘪𝘯𝘬 𝘐𝘴 𝘝𝘢𝘭𝘪𝘥 𝘍𝘰𝘳 1 𝘋𝘢𝘺 𝘖𝘯𝘭𝘺.</b></blockquote>"""
 
         await log_msg.reply_text(text=f"**RᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n**Stream ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True,  quote=True)
         await m.reply_text(
