@@ -25,7 +25,7 @@ async def start(b, m):
     usr_cmd = m.text.split("_")[-1]
     if usr_cmd == "/start":
         await m.reply_text(
-            text="**𝘏𝘦𝘭𝘭𝘰 𝘛𝘩𝘦𝘳𝘦...⚡\n𝘐'𝘮 𝘚𝘪𝘮𝘱𝘭𝘦 𝘛𝘦𝘭𝘨𝘳𝘢𝘮 𝘍𝘪𝘭𝘦 𝘛𝘰 𝘓𝘪𝘯𝘬 𝘉𝘖𝘛**", disable_web_page_preview=True,  quote=True,
+            text="**𝘏𝘦𝘭𝘭𝘰 𝘛𝘩𝘦𝘳𝘦...⚡\n𝘐'𝘮 𝘈 𝘚𝘪𝘮𝘱𝘭𝘦 𝘛𝘦𝘭𝘨𝘳𝘢𝘮 𝘍𝘪𝘭𝘦 𝘛𝘰 𝘓𝘪𝘯𝘬 𝘉𝘰𝘵.**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton("🚀 𝘜𝘱𝘥𝘢𝘵𝘦𝘴 🚀", url="https://telegram.dog/piroxbots")]
@@ -76,13 +76,7 @@ async def help_handler(bot, message):
               
     await message.reply_text(
             text="""**𝘑𝘶𝘴𝘵 𝘍𝘰𝘳𝘸𝘢𝘳𝘥 𝘛𝘩𝘦 𝘍𝘪𝘭𝘦 & 𝘠𝘰𝘶 𝘞𝘪𝘭𝘭 𝘎𝘦𝘵 𝘛𝘩𝘦 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘓𝘪𝘯𝘬.**""", disable_web_page_preview=True,  quote=True,
-  
-        
-        reply_markup=InlineKeyboardMarkup(
-                [
-                    [InlineKeyboardButton("🚀 𝘜𝘱𝘥𝘢𝘵𝘦𝘴 🚀", url="https://telegram.dog/piroxbots")]
-                ]
-            ))
+            )
 
 @StreamBot.on_message(filters.command('about'))
 async def about_handler(bot, message):
