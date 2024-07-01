@@ -25,7 +25,7 @@ async def start(b, m):
     usr_cmd = m.text.split("_")[-1]
     if usr_cmd == "/start":
         await m.reply_text(
-            text="**𝘏𝘦𝘭𝘭𝘰 𝘛𝘩𝘦𝘳𝘦...⚡\n\n𝘐'𝘮 𝘈 𝘚𝘪𝘮𝘱𝘭𝘦 𝘛𝘦𝘭𝘨𝘳𝘢𝘮 𝘍𝘪𝘭𝘦 𝘛𝘰 𝘓𝘪𝘯𝘬 𝘉𝘰𝘵.\n\n<blockquote>𝘑𝘶𝘴𝘵 𝘍𝘰𝘳𝘸𝘢𝘳𝘥 𝘛𝘩𝘦 𝘍𝘪𝘭𝘦 & 𝘐 𝘞𝘐𝘭𝘭 𝘎𝘪𝘷𝘦 𝘠𝘰𝘶 𝘛𝘩𝘦 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘓𝘪𝘯𝘬.</blockquote>**",
+            text="**𝘏𝘦𝘭𝘭𝘰 𝘛𝘩𝘦𝘳𝘦...⚡\n𝘐'𝘮 𝘈 𝘚𝘪𝘮𝘱𝘭𝘦 𝘛𝘦𝘭𝘨𝘳𝘢𝘮 𝘍𝘪𝘭𝘦 𝘛𝘰 𝘓𝘪𝘯𝘬 𝘉𝘰𝘵.\n\n<blockquote>𝘑𝘶𝘴𝘵 𝘍𝘰𝘳𝘸𝘢𝘳𝘥 𝘛𝘩𝘦 𝘍𝘪𝘭𝘦 & 𝘐 𝘞𝘐𝘭𝘭 𝘎𝘪𝘷𝘦 𝘠𝘰𝘶 𝘛𝘩𝘦 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘓𝘪𝘯𝘬.</blockquote>\n\n𝘋𝘰𝘯'𝘵 𝘍𝘰𝘳𝘸𝘢𝘳𝘥 𝘔𝘰𝘳𝘦 𝘛𝘩𝘢𝘯 𝘖𝘯𝘦 𝘍𝘪𝘭𝘦 𝘈𝘵 𝘖𝘯𝘤𝘦,\n𝘐𝘧 𝘠𝘰𝘶 𝘋𝘰 𝘋𝘪𝘳𝘦𝘤𝘵 𝘉𝘢𝘯!\n\n<blockquote>𝘓𝘪𝘯𝘬 𝘞𝘰𝘯'𝘵 𝘞𝘰𝘳𝘬 𝘍𝘰𝘳 𝘓𝘦𝘦𝘤𝘩𝘪𝘯𝘨 :)</blockquote>**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton("🚀 𝘜𝘱𝘥𝘢𝘵𝘦𝘴 🚀", url="https://telegram.dog/piroxbots")]
@@ -75,8 +75,14 @@ async def help_handler(bot, message):
         )
               
     await message.reply_text(
-            text="""**𝘑𝘶𝘴𝘵 𝘍𝘰𝘳𝘸𝘢𝘳𝘥 𝘛𝘩𝘦 𝘍𝘪𝘭𝘦 & 𝘠𝘰𝘶 𝘞𝘪𝘭𝘭 𝘎𝘦𝘵 𝘛𝘩𝘦 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘓𝘪𝘯𝘬.**""", disable_web_page_preview=True,  quote=True,
-            )
+            text="""**<blockquote>𝘑𝘶𝘴𝘵 𝘍𝘰𝘳𝘸𝘢𝘳𝘥 𝘛𝘩𝘦 𝘍𝘪𝘭𝘦 & 𝘐 𝘞𝘐𝘭𝘭 𝘎𝘪𝘷𝘦 𝘠𝘰𝘶 𝘛𝘩𝘦 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘓𝘪𝘯𝘬.</blockquote>\n\n𝘋𝘰𝘯'𝘵 𝘍𝘰𝘳𝘸𝘢𝘳𝘥 𝘔𝘰𝘳𝘦 𝘛𝘩𝘢𝘯 𝘖𝘯𝘦 𝘍𝘪𝘭𝘦 𝘈𝘵 𝘖𝘯𝘤𝘦,\n𝘐𝘧 𝘠𝘰𝘶 𝘋𝘰 𝘋𝘪𝘳𝘦𝘤𝘵 𝘉𝘢𝘯!\n\n<blockquote>𝘓𝘪𝘯𝘬 𝘞𝘰𝘯'𝘵 𝘞𝘰𝘳𝘬 𝘍𝘰𝘳 𝘓𝘦𝘦𝘤𝘩𝘪𝘯𝘨 :)</blockquote>**""", disable_web_page_preview=True,  quote=True,
+            
+            
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [InlineKeyboardButton("💭 𝘚𝘶𝘱𝘱𝘰𝘳𝘵 𝘎𝘳𝘰𝘶𝘱 💭", url="https://telegram.dog/raixchat")]
+                ]
+            ))
 
 @StreamBot.on_message(filters.command('about'))
 async def about_handler(bot, message):
@@ -90,12 +96,13 @@ async def about_handler(bot, message):
             text="""<b>
 ○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://telegram.dog/piroxbots'>[𝖯𝖨𝖱𝖮]</a>
 ○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : <a href='https://www.python.org/downloads/release/python-3106/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
-○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://cloud.google.com/learn/what-is-a-virtual-private-server'>VPS</a>
+○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://piroxbots.koyeb.app/'>Koyeb</a>
 ○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a></b>""", disable_web_page_preview=True,  quote=True,
   
         
         reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("🚀 𝘜𝘱𝘥𝘢𝘵𝘦𝘴 🚀", url="https://telegram.dog/piroxbots")]
+                    [InlineKeyboardButton("🚀 𝘜𝘱𝘥𝘢𝘵𝘦𝘴 🚀", url="https://telegram.dog/piroxbots")],
+                    [InlineKeyboardButton("💭 𝘚𝘶𝘱𝘱𝘰𝘳𝘵 𝘎𝘳𝘰𝘶𝘱 💭", url="https://telegram.dog/raixchat")]
                 ]
             ))
