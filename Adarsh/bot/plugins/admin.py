@@ -1,6 +1,5 @@
 # (c) @adarsh-goel
 import os
-import sys
 from os import execle, system
 import time
 import string
@@ -118,12 +117,3 @@ async def broadcast_(c, m):
             quote=True
         )
     os.remove('broadcast.txt')
-
-@StreamBot.on_message(filters.command('restart') & filters.user(list(Var.OWNER_ID)))
-async def restart_bot(client, message):
-    msg = await message.reply_text(
-        text="<b>Bot Restarting ...</b>"
-    )        
-    await msg.edit("<b>Restart Successfully Completed ✅</b>")
-    system("pip3 install --no-cache-dir -r requirements.txt")
-    execle(sys.executable, sys.executable, "python -m Adarsh")
