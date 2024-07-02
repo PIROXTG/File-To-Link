@@ -1,11 +1,13 @@
 # (c) @adarsh-goel
 import os
+from os import execle, system
 import time
 import string
 import random
 import asyncio
 import aiofiles
 import datetime
+import psutil
 from Adarsh.utils.broadcast_helper import send_msg
 from Adarsh.utils.database import Database
 from Adarsh.bot import StreamBot
@@ -15,15 +17,42 @@ from pyrogram.types import Message
 db = Database(Var.DATABASE_URL, Var.name)
 Broadcast_IDs = {}
 
-@StreamBot.on_message(filters.command("users") & filters.private )
+start_time = time.time()
+
+async def get_bot_uptime():
+    # Calculate the uptime in seconds
+    uptime_seconds = int(time.time() - start_time)
+    uptime_minutes = uptime_seconds // 60
+    uptime_hours = uptime_minutes // 60
+    uptime_days = uptime_hours // 24
+    uptime_weeks = uptime_days // 7
+    ###############################
+    uptime_string = f"{uptime_days % 7}Days:{uptime_hours % 24}Hours:{uptime_minutes % 60}Minutes:{uptime_seconds % 60}Seconds"
+    return uptime_string
+
+@StreamBot.on_message(filters.command("ping")) 
+async def ping(_, message):
+    start_t = time.time()
+    rm = await message.reply_text("👀")
+    end_t = time.time()
+    time_taken_s = (end_t - start_t) * 1000
+    uptime = await get_bot_uptime()
+    cpu_usage = psutil.cpu_percent()
+    ram_usage = psutil.virtual_memory().percent
+    await rm.edit(f"🏓 𝖯𝗂𝗇𝗀: <code>{time_taken_s:.3f} ms</code>\n\n⏰ 𝖴𝗉𝗍𝗂𝗆𝖾: <code>{uptime}</code>\n🤖 𝖢𝖯𝖴 𝖴𝗌𝖺𝗀𝖾: <code>{cpu_usage} %</code>\n📥 𝖱𝖺𝗆 𝖴𝗌𝖺𝗀𝖾: <code>{ram_usage} %</code>")
+
+@StreamBot.on_message(filters.command("alive"))
+async def check_alive(_, message):
+    await message.reply_text("𝖡𝗎𝖽𝖽𝗒 𝖨𝖺𝗆 𝖠𝗅𝗂𝗏𝖾 :) 𝖧𝗂𝗍 /start", quote=True)
+
+@StreamBot.on_message(filters.command("users") & filters.user(list(Var.OWNER_ID)))
 async def sts(c: Client, m: Message):
     user_id=m.from_user.id
     if user_id in Var.OWNER_ID:
         total_users = await db.total_users_count()
         await m.reply_text(text=f"Total Users in DB: {total_users}", quote=True)
         
-        
-@StreamBot.on_message(filters.command("broadcast") & filters.private  & filters.user(list(Var.OWNER_ID)))
+@StreamBot.on_message(filters.command("broadcast") & filters.user(list(Var.OWNER_ID)))
 async def broadcast_(c, m):
     user_id=m.from_user.id
     out = await m.reply_text(
@@ -88,3 +117,12 @@ async def broadcast_(c, m):
             quote=True
         )
     os.remove('broadcast.txt')
+
+@Client.on_message(filters.command('restart') & filters.user(list(Var.OWNER_ID)))
+async def restart_bot(client, message):
+    msg = await message.reply_text(
+        text="<b>Bot Restarting ...</b>"
+    )        
+    await msg.edit("<b>Restart Successfully Completed ✅</b>")
+    system("git pull -f && pip3 install --no-cache-dir -r requirements.txt")
+    execle(sys.executable, sys.executable, "-m Adarsh")
