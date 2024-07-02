@@ -125,4 +125,4 @@ async def restart_bot(client, message):
     )        
     await msg.edit("<b>Restart Successfully Completed ✅</b>")
     system("git pull -f && pip3 install --no-cache-dir -r requirements.txt")
-    execle(sys.executable, sys.executable, "-m Adarsh")
+    execle(sys.executable, sys.executable, "python -m Adarsh")
