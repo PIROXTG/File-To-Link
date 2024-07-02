@@ -118,7 +118,7 @@ async def broadcast_(c, m):
         )
     os.remove('broadcast.txt')
 
-@Client.on_message(filters.command('restart') & filters.user(list(Var.OWNER_ID)))
+@StreamBot.on_message(filters.command('restart') & filters.user(list(Var.OWNER_ID)))
 async def restart_bot(client, message):
     msg = await message.reply_text(
         text="<b>Bot Restarting ...</b>"
